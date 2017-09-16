@@ -12,8 +12,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . mysqli_connect_error());
 } 
 mysqli_set_charset($conn, "utf8");
-
-
+//ar bandoma prideti irasa
+if (isset($_POST['submit'])) {
+    $sql = "INSERT INTO products (name, price, description) VALUES ('" . $_POST['name'] ."', '" . $_POST['price'] ."', '" . $_POST['description'] ."')";
+    $result = mysqli_query($conn, $sql);
+}
+//ar bandoma pasalinti irasa
+if (isset($_GET['delete'])) {
+    //$_GET['delete'] reiksme gaunama is nuorodos
+    $sql = "DELETE FROM products WHERE id =" . $_GET['delete'];
+    $result = mysqli_query($conn, $sql);
+}
 $sql = "SELECT * FROM products"; /*SELECT * FROM products ORDER BY id jeigu eiles tvarka */
 $result = mysqli_query($conn, $sql);
 $products = [];
@@ -35,7 +44,3 @@ mysqli_close($conn);
 
 include "view.php";
 ?>
- 
-
-
-
