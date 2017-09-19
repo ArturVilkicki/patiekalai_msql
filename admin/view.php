@@ -18,6 +18,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th>Nuotrauka</th>
                 <th>Weight</th>
                 <th>Qty</th>
                 <th>Delete</th>
@@ -32,6 +33,7 @@
               <td>" .$product['name'] . "</td>
               <td class='price'>" .$product['price'] . "</td>
               <td>". $product['description'] . "</td>
+              <td><img height='50px' src='../images/" .$product['image'] . "'</td>
               <td>" .$product['weight'] . "</td>
               <td>" .$product['qty'] . "</td>
               <td><a class='btn btn-sm btn-danger' href='?delete=". $product['id'] ."' >Delete</a></td>
@@ -41,12 +43,13 @@
           </tbody>
       </table>
       </div>
-      <div class="col">Forma
+      <div class="col">
+        <a href="?logout=true">Logout</a>
         <h2>Prideti preke</h2>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="form-group">
               <label>Pavadinimas</label>
-              <input class="form-control" type="text" name="name">
+              <input required class="form-control" type="text" name="name">
             </div>
             <div class="row">
               <div class="form-group col">
@@ -56,8 +59,12 @@
               <div class="form-group col">
                 <label>Description</label>
                 <input class="form-control" type="text" name="description">
-              </div>
+              </div>  
             </div>
+            <div class="form-group col">
+                <label>Nuotrauka</label>
+                <input class="form-control" type="file" name="image">
+              </div> 
             <div class="row">
               <div class="form-group col">
                 <label>Weight</label>

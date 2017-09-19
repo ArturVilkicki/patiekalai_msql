@@ -8,8 +8,9 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row"> 
-			<table class="table">
+		<div class="row">
+      <div class="col">			
+        <table class="table">
   				<thead>
     				<tr>
       					<th>ID</th>
@@ -25,8 +26,11 @@
 						}
    					?>
   				</tbody>
-			</table>
-		</div>
+			  </table>
+		  </div>
+      
+    </div>
+
 	</div>
 
 </body>
