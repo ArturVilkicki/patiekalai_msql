@@ -27,7 +27,8 @@
           ."<br />"   
           ."Description: " .$product['description']
           ."<br />"
-          ."Image: " ."<img height='50px' src='../images/" .$product['image'] . "'"
+          ."Image: " ."<img height='50px' src='images/" .$product['image'] . "'"
+          ."<br />"
           ."<br />"  
           ."Weight: ".$product['weight']
           ."<br />"  
