@@ -1,0 +1,21 @@
+.header {
+	
+	color: white;
+	text-align: center;
+	font-size: 50px;
+	padding: 30px;
+}
+.divoPlotis {
+	width: 100px;
+	height: 150px;
+	background-color: red;
+
+}
+.divai {
+	border:1px solid black;
+	float: left;
+	background-color: grey;
+	color: white;
+	font-size: 30px;
+	width: 320px;
+}
